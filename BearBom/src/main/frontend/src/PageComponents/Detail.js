@@ -7,10 +7,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import { TextField } from "@mui/material";
 
 const Detail = () => {
   // 아래에 왜 초기값을 객체 형태로 주지 않으면 오류가 나는지 모르겠음
@@ -158,19 +154,7 @@ const Detail = () => {
             <section id="review">후기</section>
             <hr />
           </div>
-          <div className="main-cal">
-            const [startDate, setStartDate] = useState()
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <DesktopDatePicker
-                label={"수강기간 (From)"}
-                value={startDate}
-                onChange={(newValue) => {
-                  setStartDate(newValue);
-                }}
-                renderInput={(params) => <TextField {...params} />}
-              />
-            </LocalizationProvider>
-          </div>
+          <div className="main-cal"></div>
         </div>
       </div>
       {/* <div className="detail-main">
