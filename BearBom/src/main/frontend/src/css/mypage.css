@@ -1,0 +1,27 @@
+.outside {
+  white-space: pre-wrap;
+
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 450px;
+  height: 220px;
+}
+
+.inside1 {
+  margin: 5px;
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+}
+.inside2 {
+  margin: 5px;
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+
+.inside:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+}

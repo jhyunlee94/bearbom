@@ -4,10 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/header.css";
+import { useState } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
-
+  const [categoryBar, setCategoryBar] = useState(false);
   return (
     <>
       {/* Navbar부분 */}
@@ -19,6 +20,7 @@ const Header = () => {
               onClick={() => {
                 navigate("/course");
               }}
+              onMouseUp={() => {}}
             >
               클래스 검색
             </Nav.Link>

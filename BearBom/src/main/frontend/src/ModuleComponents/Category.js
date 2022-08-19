@@ -4,7 +4,24 @@ import React from "react";
 const Category = () => {
   return (
     <>
-      <div>Category</div>
+      <div className="category-main">
+        <ul>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+        </ul>
+        <ul>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+          <li>서울</li>
+        </ul>
+      </div>
     </>
   );
 };
