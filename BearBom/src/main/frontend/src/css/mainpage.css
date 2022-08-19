@@ -1,0 +1,117 @@
+.vod {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  margin: auto;
+  inset: 0px auto auto 0px;
+  box-sizing: border-box;
+}
+
+/* b,
+strong {
+  font-weight: 700;
+}
+
+.top-vod-banner-container .main-title-area {
+  position: absolute;
+  width: 40%;
+  min-width: 700px;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title-area .anim-msg .sub-msg {
+  color: #fff;
+  font-size: 36px;
+}
+
+.top-vod-banner-container .main-title-area .anim-msg .sub-msg.visible {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+} */
+.top-vod-banner-container {
+  /* position: relative; */
+  /* width: 100%; */
+  height: 100vh;
+  z-index: 2;
+}
+.top-vod-banner-container .vod {
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top-vod-banner-container .main-title-area {
+  position: absolute;
+  width: 40%;
+  min-width: 700px;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.top-vod-banner-container .main-title-area .msg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 75%;
+}
+.top-vod-banner-container .main-title-area .msg-wrapper .msg-1 img {
+  width: 40%;
+  min-width: 180px;
+  max-width: 280px;
+}
+.top-vod-banner-container .main-title-area .angle-bottom-lottie {
+  width: 10%;
+  margin: 0 auto;
+  max-width: 100px;
+}
+.top-vod-banner-container .main-title-area .anim-msg {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.top-vod-banner-container .main-title-area .anim-msg.visible {
+  transition: all 0.5s ease-in-out;
+}
+.top-vod-banner-container .main-title-area .anim-msg .sub-msg {
+  white-space: pre-wrap;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  font-size: 36px;
+}
+.top-vod-banner-container .main-title-area .anim-msg .sub-msg.visible {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
