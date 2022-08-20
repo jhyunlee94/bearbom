@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Calendar from "./Calendar.js";
 
 const Detail = () => {
   // 아래에 왜 초기값을 객체 형태로 주지 않으면 오류가 나는지 모르겠음
@@ -48,7 +49,7 @@ const Detail = () => {
         </div>
         <div className="info">
           <div className="main-info">
-            Title
+            <h4>Title</h4>
             <Navbar>
               <Nav className="justify-content-start">
                 <AnchorLink className="nav-list" href="#teacher">
@@ -132,12 +133,6 @@ const Detail = () => {
             <hr />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <section id="notice">유의사항</section>
             <hr />
             <br />
@@ -154,7 +149,9 @@ const Detail = () => {
             <section id="review">후기</section>
             <hr />
           </div>
-          <div className="main-cal"></div>
+          <div className="main-cal">
+            <Calendar />
+          </div>
         </div>
       </div>
       {/* <div className="detail-main">
