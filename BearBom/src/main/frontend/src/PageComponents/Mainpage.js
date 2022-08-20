@@ -80,8 +80,7 @@ const Mainpage = () => {
           </div>
         </div>
       </div>
-
-      <Button>테스트</Button>
+      <h2 id="mainpageFirstCarousel">베어봄이 검증한 이달의 인기클래스!</h2>
     </>
   );
 };
