@@ -1,21 +1,21 @@
-div {
+/* div {
     border: 1px solid;
+} */
+
+.middle {
+  display: flex;
+  flex-direction: row;
 }
 
-.middle{
-    display: flex;
-    flex-direction: row;
+.leftbar {
+  min-width: 25%;
 }
 
-.leftbar{
-    min-width: 25%;
+.content {
+  min-width: 75%;
 }
 
-.content{
-    min-width: 75%;
-}
-
-.phoneNum{
-    width: 30%;
-    height: 35px;
+.phoneNum {
+  width: 30%;
+  height: 35px;
 }
