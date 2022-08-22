@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-
+import MiniCard from "./MiniCard";
 import "../css/mainpage.css";
 import "../css/mainpage.scss";
+import styled from "styled-components";
 
 import Carousel from "react-bootstrap/Carousel";
 
@@ -48,6 +49,26 @@ const Mainpage = (props) => {
       pieUrl: "https://cloud.protopie.io/p/27631ac9d5",
     },
   ];
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   const initialArray = [
     `지금 베어봄과 함께
@@ -151,40 +172,23 @@ const Mainpage = (props) => {
                   </div>
                 );
               })} */}
+              <CarouselContainer>
+                <div style={{ width: "80%", margin: "0 auto" }}>
+                  <Carousel responsive={responsive}>
+                    {prototypes.map((data) => (
+                      // 여기서 {}말고 ()로 하면 return 안해도 됨
+                      //   이게 props 넣는거
 
-              <Carousel
-                activeIndex={index}
-                onSelect={handleSelect}
-                variant="dark"
-              >
-                <Carousel.Item>
-                  ㅁㅁㅁㅁㅁ
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  ㅁㅁㅁㅁㅁ
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  ㅁㅁㅁㅁㅁ
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
+                      <MiniCard
+                        thumbnail={data.thumbnail}
+                        title={data.title}
+                        condition={true}
+                        // 예시로 보여주기 위함
+                      />
+                    ))}
+                  </Carousel>
+                </div>
+              </CarouselContainer>
             </div>
           </div>
         </div>
@@ -200,3 +204,5 @@ const Mainpage = (props) => {
 };
 
 export default Mainpage;
+
+const CarouselContainer = styled.div``;
