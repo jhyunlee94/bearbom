@@ -79,3 +79,7 @@ button {
   font-weight: 700;
   border-radius: 50%;
 }
+
+.calendar-title {
+  margin-top: 20px;
+}

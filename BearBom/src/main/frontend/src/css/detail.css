@@ -12,10 +12,10 @@
 .img {
   height: 20%;
   margin-top: 20px;
-  background-color: rgb(224, 175, 236);
 }
 .info {
   height: 80%;
+  margin-left: 20px;
 }
 .main-info {
   float: left;
@@ -33,19 +33,21 @@
   width: 48%;
   height: 100%;
   margin-left: 20px;
+  margin-right: 10px;
 }
 .sub-total-img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 48%;
   height: 100%;
-
   grid-template-rows: repeat(2, 50%);
+  overflow: hidden;
 }
 
 .sub-img1 {
   height: 100%;
   width: 100%;
+  margin-right: 10px;
 }
 
 .sub-img2 {
@@ -56,11 +58,13 @@
 .sub-img3 {
   height: 100%;
   width: 100%;
+  margin-top: 10px;
 }
 
 .sub-img4 {
   height: 100%;
   width: 100%;
+  margin-top: 10px;
 }
 
 .img1 {
@@ -70,4 +74,42 @@
   padding-left: 20px;
   color: black;
   font-weight: bold;
+}
+
+.main-cal {
+  padding-right: 10px;
+  text-align: center;
+}
+
+.calendar-box {
+  box-sizing: border-box;
+  border: 1px black solid;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  height: 500px;
+}
+
+.sssss {
+  margin: 10px;
+}
+
+.calendar-button-box {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.calendar-button1 {
+  width: 20%;
+  float: left;
+  margin-right: 20px;
+  border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0);
+}
+.calendar-button2 {
+  width: 25%;
+  float: left;
+  border-color: rgba(0, 0, 0, 0);
 }
