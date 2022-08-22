@@ -1,14 +1,54 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 import "../css/mainpage.css";
 import "../css/mainpage.scss";
-import { Button, Checkbox } from "@mui/material";
-import { pink } from "@mui/material/colors";
-import { Iron } from "@mui/icons-material";
 
-const Mainpage = () => {
+import Carousel from "react-bootstrap/Carousel";
+
+const Mainpage = (props) => {
+  const prototypes = [
+    {
+      id: "pp-01",
+      title: "Kids-story",
+      artist: "Thomas Buisson",
+      desc: "This prototype was made with ProtoPie, the interactive prototyping tool for all digital produc",
+      thumbnail:
+        "https://prototype-shop.s3.ap-northeast-2.amazonaws.com/thumbnails/Kids-story_1.mp4",
+      price: 10,
+      pieUrl: "https://cloud.protopie.io/p/8a6461ad85",
+    },
+    {
+      id: "pp-02",
+      title: "mockyapp",
+      artist: "Ahmed Amr",
+      desc: "This prototype was made with ProtoPie, the interactive prototyping tool for all digital produc",
+      thumbnail:
+        "https://prototype-shop.s3.ap-northeast-2.amazonaws.com/thumbnails/mockyapp.mp4",
+      price: 20,
+      pieUrl: "https://cloud.protopie.io/p/27631ac9d5",
+    },
+    {
+      id: "pp-03",
+      title: "mockyapp",
+      artist: "Ahmed Amr",
+      desc: "This prototype was made with ProtoPie, the interactive prototyping tool for all digital produc",
+      thumbnail:
+        "https://prototype-shop.s3.ap-northeast-2.amazonaws.com/thumbnails/mockyapp.mp4",
+      price: 20,
+      pieUrl: "https://cloud.protopie.io/p/27631ac9d5",
+    },
+    {
+      id: "pp-04",
+      title: "mockyapp",
+      artist: "Ahmed Amr",
+      desc: "This prototype was made with ProtoPie, the interactive prototyping tool for all digital produc",
+      thumbnail:
+        "https://prototype-shop.s3.ap-northeast-2.amazonaws.com/thumbnails/mockyapp.mp4",
+      price: 20,
+      pieUrl: "https://cloud.protopie.io/p/27631ac9d5",
+    },
+  ];
+
   const initialArray = [
     `지금 베어봄과 함께
     일상을 취미로 채워보세요!`,
@@ -32,6 +72,11 @@ const Mainpage = () => {
     }, 3000);
   }, []);
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
       <div className="top-vod-banner-container">
@@ -80,7 +125,76 @@ const Mainpage = () => {
           </div>
         </div>
       </div>
-      <h2 id="mainpageFirstCarousel">베어봄이 검증한 이달의 인기클래스!</h2>
+      <main id="wrapper" className="main-contents">
+        <div className="list-box favorite-class-area">
+          <div className="list-header">
+            <h2>베이봄이 검증한 이달의 인기클래스!</h2>
+            <div className="favorite-list">
+              {/* {prototypes.map((prototype) => {
+                const { id, thumbnail, title, price, desc, pieUrl } = prototype;
+                return (
+                  <div className="prototype" key={id}>
+                    <a href={pieUrl} target="_BLANK" rel="noreferrer">
+                      <div style={{ padding: "25px 0 33px 0" }}>
+                        <video
+                          autoPlay
+                          loop
+                          playsInline
+                          className="prototype__artwork prototype__eidit"
+                          src={thumbnail}
+                          style={{
+                            objectFit: "contain",
+                          }}
+                        ></video>
+                      </div>
+                    </a>
+                  </div>
+                );
+              })} */}
+
+              <Carousel
+                activeIndex={index}
+                onSelect={handleSelect}
+                variant="dark"
+              >
+                <Carousel.Item>
+                  ㅁㅁㅁㅁㅁ
+                  <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>
+                      Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  ㅁㅁㅁㅁㅁ
+                  <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>
+                      Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  ㅁㅁㅁㅁㅁ
+                  <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>
+                      Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+          </div>
+        </div>
+        <div className="list-box new-class-area">
+          <div className="list-header">
+            <h2>오늘 오픈 했어요!</h2>
+            <div className="new-list"></div>
+          </div>
+        </div>
+      </main>
     </>
   );
 };

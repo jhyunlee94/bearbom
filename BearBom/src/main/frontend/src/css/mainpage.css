@@ -120,3 +120,29 @@ h2 {
   font-size: 24px;
   font-weight: bold;
 }
+
+#wrapper {
+  margin: 0 auto;
+}
+.main-contents {
+  position: relative;
+}
+
+.main-contents > div {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.list-box {
+  padding: 50px 0;
+}
+
+.list-header {
+  position: relative;
+  height: 46px;
+  padding: 0 15px;
+}
+
+/**/
