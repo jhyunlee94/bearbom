@@ -24,7 +24,7 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link
               onClick={() => {
-                navigate("/registration");
+                navigate("course/registration");
               }}
             >
               클래스 등록
