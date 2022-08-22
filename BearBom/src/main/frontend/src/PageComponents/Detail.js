@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Calendar from "./Calendar.js";
 
 const Detail = () => {
   // 아래에 왜 초기값을 객체 형태로 주지 않으면 오류가 나는지 모르겠음
@@ -48,7 +49,7 @@ const Detail = () => {
         </div>
         <div className="info">
           <div className="main-info">
-            Title
+            <h4>Title</h4>
             <Navbar>
               <Nav className="justify-content-start">
                 <AnchorLink className="nav-list" href="#teacher">
@@ -74,41 +75,99 @@ const Detail = () => {
                 </AnchorLink>
               </Nav>
             </Navbar>
-            <section id="teacher">강사소개</section>
+            <hr />
+            <section id="teacher">
+              <h5>
+                <b>강사소개</b>
+              </h5>
+              <div>
+                <img src="require(./)">김광민 강사님</img>
+              </div>
+              <p>안녕하세여 김광민입니다~~~~~~~~ 감사합니다~~~~~~</p>
+            </section>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr />
+            <section id="class">
+              <h5>
+                <b>클래스소개</b>
+              </h5>
+            </section>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr />
+            <section id="cur">
+              <h5>
+                <b>커리큘럼</b>
+              </h5>
+            </section>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <section id="time">
+              <h5>
+                <b>시간표</b>
+              </h5>
+            </section>
             <hr />
             <br />
             <br />
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section id="class">클래스소개</section>
             <hr />
+            <section id="loc">
+              <h5>
+                <b>위치</b>
+              </h5>
+            </section>
+
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section id="cur">커리큘럼</section>
             <hr />
+            <section id="notice">
+              <h5>
+                <b>유의사항</b>
+              </h5>
+            </section>
+
             <br />
             <br />
             <br />
@@ -120,41 +179,25 @@ const Detail = () => {
             <br />
             <br />
             <br />
-            <br />
-            <section id="time">시간표</section>
             <hr />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section id="loc">위치</section>
-            <hr />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section id="notice">유의사항</section>
-            <hr />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section id="review">후기</section>
-            <hr />
+            <section id="review">
+              <h5>
+                <b>후기</b>
+              </h5>
+            </section>
           </div>
-          <div className="main-cal"></div>
+          <div className="main-cal">
+            <div className="calendar-box">
+              <div className="calendar-title">
+                <h4>나만의 싸인 만들기 클래스</h4>
+              </div>
+              <Calendar className="sssss" />
+              <div className="calendar-button-box">
+                <button className="calendar-button1">찜하기</button>
+                <button className="calendar-button2">공유하기</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* <div className="detail-main">
