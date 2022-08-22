@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-function MiniCard({ title, thumbnail, condition }) {
+function MiniCard({ id, title, thumbnail, condition }) {
   return (
-    <CardWrapper href>
+    <CardWrapper href={`/course/${id}`}>
       {/* 개별 Card */}
       {/* img */}
+      <p>{id}</p>
       <VideoContainer>
         {/* 95%만족 태그 */}
         <div className="tag">95% 만족</div>
