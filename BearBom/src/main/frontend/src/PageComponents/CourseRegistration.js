@@ -23,11 +23,7 @@ const CourseRegistration = (/*{onClickNexButton}*/) => {
     setCategory(event.target.value);
   };
 
-<<<<<<< HEAD
 const CourseRegistration = () => {
-  
-=======
->>>>>>> 614578eb2a459d6a9fcb1b5d8e486a19475af50d
   return (
     <>
       <div className="top">
