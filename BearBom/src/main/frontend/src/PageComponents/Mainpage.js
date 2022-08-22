@@ -10,7 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 import { Button } from "react-bootstrap";
 import axios from "axios";
 import { API_BASE_URL } from "../app-config";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Mainpage = (props) => {
   const [course, setCourse] = useState([]);
@@ -146,7 +146,10 @@ const Mainpage = (props) => {
   };
 
   // const [loading, setLoading] = useState(true);
-  const onClickClassRegist = useEffect(() => {}, []);
+  // const onClickClassRegist = useEffect(() => {}, []);
+  // const onClickClassRegist = () => {
+  //   history.push("/course/registration");
+  // };
 
   let navigate = useNavigate();
   return (
@@ -218,9 +221,14 @@ const Mainpage = (props) => {
               <Button
                 className="class-open-page-move-btn"
                 variant="light"
-                onClickClassRegist={onClickClassRegist}
+                // onClickClassRegist={onClickClassRegist}
               >
-                클래스 오픈하기
+                <Link
+                  style={{ textDecoration: "none", color: "#ff5862" }}
+                  to="/course/registration"
+                >
+                  클래스 오픈하기
+                </Link>
               </Button>
             </div>
           </div>
@@ -259,6 +267,31 @@ const Mainpage = (props) => {
         <div className="list-box new-class-area">
           <div className="list-header">
             <h2>오늘 오픈 했어요!</h2>
+          </div>
+          <div>
+            <CarouselContainer>
+              <div className="favorite-list">
+                <div style={{ width: "100%", margin: "0 auto" }}>
+                  <Carousel responsive={responsive}>
+                    {/* <div className="test001"> */}
+
+                    {stateText.map((data) => (
+                      // 여기서 {}말고 ()로 하면 return 안해도 됨
+                      //   이게 props 넣는거
+
+                      <MiniCard
+                        id={data.id}
+                        thumbnail={data.thumbnail}
+                        title={data.title}
+                        condition={true}
+                        // 예시로 보여주기 위함
+                      />
+                    ))}
+                    {/* </div> */}
+                  </Carousel>
+                </div>
+              </div>
+            </CarouselContainer>
           </div>
         </div>
       </main>

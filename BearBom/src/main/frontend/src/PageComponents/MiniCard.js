@@ -8,23 +8,25 @@ function MiniCard({ id, title, thumbnail, condition }) {
       <p>{id}</p>
       <VideoContainer>
         {/* 95%만족 태그 */}
-        <div className="tag">95% 만족</div>
+        <div className="test">
+          <div className="tag">95% 만족</div>
 
-        {/* 비디오 */}
+          {/* 비디오 */}
 
-        <video
-          autoPlay
-          loop
-          playsInline
-          className="prototype__artwork prototype__eidit"
-          src={thumbnail}
-          style={{
-            objectFit: "contain",
-          }}
-        ></video>
+          <video
+            autoPlay
+            loop
+            playsInline
+            className="prototype__artwork prototype__eidit"
+            src={thumbnail}
+            style={{
+              objectFit: "contain",
+            }}
+          ></video>
 
-        {/* 위치 */}
-        <div className="place">마포구 망원동</div>
+          {/* 위치 */}
+          <div className="place">마포구 망원동</div>
+        </div>
       </VideoContainer>
       {/* title */}
       <TextContainer>
@@ -49,6 +51,7 @@ export default MiniCard;
 
 const TextContainer = styled.div`
   margin-top: 2rem;
+  margin-left: 5rem;
   color: black;
   .first_row {
     font-weight: 600;
@@ -83,9 +86,11 @@ const CardWrapper = styled.a`
 
 const VideoContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: 85%;
   height: 300px;
   padding: 2rem;
+  margin-left: 3rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,4 +116,5 @@ const VideoContainer = styled.div`
     color: black;
     font-weight: 600;
   }
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
