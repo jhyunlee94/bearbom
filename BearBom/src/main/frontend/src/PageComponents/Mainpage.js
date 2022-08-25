@@ -10,7 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 import { Button } from "react-bootstrap";
 import axios from "axios";
 import { API_BASE_URL } from "../app-config";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const Mainpage = (props) => {
   const [course, setCourse] = useState([]);
@@ -147,11 +147,13 @@ const Mainpage = (props) => {
 
   // const [loading, setLoading] = useState(true);
   // const onClickClassRegist = useEffect(() => {}, []);
-  // const onClickClassRegist = () => {
-  //   history.push("/course/registration");
-  // };
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const onClickClassRegist = () => {
+    navigate("/course/registration");
+  };
+
   return (
     <>
       <div className="top-vod-banner-container">
@@ -222,13 +224,15 @@ const Mainpage = (props) => {
                 className="class-open-page-move-btn"
                 variant="light"
                 // onClickClassRegist={onClickClassRegist}
+                onClick={onClickClassRegist}
               >
-                <Link
+                {/* <Link
                   style={{ textDecoration: "none", color: "#ff5862" }}
                   to="/course/registration"
                 >
                   클래스 오픈하기
-                </Link>
+                </Link> */}
+                클래스 오픈하기
               </Button>
             </div>
           </div>
